@@ -20,6 +20,13 @@ export interface Nomination {
   awardType: 'monthly' | 'quarterly' | 'yearly';
   title: string;
   description: string;
+  resourceName: string;
+  projectAligned?: string;
+  verbiage: string;
+  supportingAcknowledgement: string;
+  coreValues: CoreValue[];
+  overallRating: number;
+  supportingDocuments: SupportingDocument[];
   sentimentScore: number;
   biasFlags: string[];
   hasBiasIssues: boolean;
@@ -28,6 +35,27 @@ export interface Nomination {
   evidence: Evidence;
 }
 
+export type CoreValue = 'customer_delight' | 'innovation' | 'team_work' | 'being_fair' | 'ownership';
+
+export interface SupportingDocument {
+  id: string;
+  name: string;
+  type: string;
+  size: number;
+  url: string;
+  uploadedAt: string;
+}
+
+export interface NominationFormData {
+  resourceName: string;
+  projectAligned?: string;
+  verbiage: string;
+  supportingAcknowledgement: string;
+  coreValues: CoreValue[];
+  overallRating: number;
+  supportingDocuments: File[];
+  awardType: 'monthly' | 'quarterly' | 'yearly';
+}
 export interface Evidence {
   slackMessages: SlackMessage[];
   jiraTickets: JiraTicket[];

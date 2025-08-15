@@ -7,6 +7,7 @@ import {
   Brain,
   Settings,
   Award,
+  Plus,
 } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
@@ -18,6 +19,7 @@ interface SidebarProps {
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Nominations', href: '/nominations', icon: Award },
+  { name: 'Submit Nomination', href: '/submit-nomination', icon: Plus },
   { name: 'Reports', href: '/reports', icon: BarChart3 },
   { name: 'AI Insights', href: '/ai-insights', icon: Brain },
   { name: 'Settings', href: '/settings', icon: Settings },

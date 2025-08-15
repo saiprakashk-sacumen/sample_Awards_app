@@ -1,4 +1,5 @@
 import { Nomination, User, DashboardMetrics } from '../types';
+import { NominationFormData } from '../types';
 import { mockUsers, mockNominations, mockMetrics, currentUser } from './mockData';
 
 // Simulate network delay
@@ -134,5 +135,12 @@ export class MockAPI {
     await delay(800);
     // Mock saving integration settings
     console.log('Integration settings updated:', settings);
+  }
+
+  // Submit nomination
+  static async submitNomination(formData: NominationFormData & { coreValues: string[]; supportingDocuments: File[] }): Promise<void> {
+    await delay(1200);
+    // Mock submission - in real app, this would upload files and save to database
+    console.log('Nomination submitted:', formData);
   }
 }

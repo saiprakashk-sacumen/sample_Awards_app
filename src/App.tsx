@@ -7,6 +7,7 @@ import { Layout } from './components/layout/Layout';
 import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
 import { Nominations } from './pages/Nominations';
+import { SubmitNomination } from './pages/SubmitNomination';
 import { Reports } from './pages/Reports';
 import { AIInsights } from './pages/AIInsights';
 import { Settings } from './pages/Settings';
@@ -39,6 +40,7 @@ function AppRoutes() {
       >
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="nominations" element={<Nominations />} />
+        <Route path="submit-nomination" element={<SubmitNomination />} />
         <Route path="reports" element={<Reports />} />
         <Route path="ai-insights" element={<AIInsights />} />
         <Route path="settings" element={<Settings />} />
